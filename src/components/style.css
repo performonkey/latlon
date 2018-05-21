@@ -1,0 +1,60 @@
+.app {
+  height: 100%;
+  font-size: Avenir Next;
+
+  & > input {
+    z-index: 1;
+    position: absolute;
+    left: calc(50vw - 10vw);
+    top: 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 50vh;
+    padding: 1rem;
+    height: 32px;
+    background: rgba(248, 248, 248, 0.2);
+    color: #ddd;
+    width: 20vw;
+  }
+
+  .cross-mark {
+    z-index: 1;
+    position: fixed;
+    top: calc(50vh - 1rem);
+    left: calc(50vw - 1rem);
+    width: 2rem;
+    height: 2rem;
+
+    .line {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+      border-right: 1px solid #ddd;
+      border-top: 1px solid #ddd;
+
+      &:last-child {
+        transform: rotate(180deg) translateY(97%) translateX(-97%);
+      }
+    }
+  }
+
+  .map {
+    height: 100%;
+    min-height: 400px;
+    cursor: crosshair;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 0;
+    height: 120px;
+    background: rgba(248, 248, 248, 0.2);
+    width: 600px;
+    left: calc(50vw - 300px);
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    color: #ddd;
+    padding: 20px;
+  }
+}
